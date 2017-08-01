@@ -2,6 +2,7 @@
     <string name="app_name">Splatit</string>
     <string name="facebook_app_id">1645630765460801</string>
     <string name="fb_login_protocol_scheme">fb1645630765460801</string>
+    <string name="play">Play</string>
 
 
 </resources>

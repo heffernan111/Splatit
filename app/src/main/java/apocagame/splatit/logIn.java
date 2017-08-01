@@ -40,7 +40,8 @@ public class logIn extends AppCompatActivity {
         LoginManager.getInstance().registerCallback(callbackManager, new FacebookCallback<LoginResult>() {
             @Override
             public void onSuccess(LoginResult loginResult) {
-                txtStatus.setText("Login Success"+loginResult.getAccessToken());
+                Intent j = new Intent(getApplicationContext(),MenuAcitivity.class);
+                startActivity(j);
 
             }
 
