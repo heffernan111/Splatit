@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.facebook.AccessToken;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
@@ -24,6 +25,12 @@ public class logIn extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         FacebookSdk.sdkInitialize(getApplicationContext());
         setContentView(R.layout.activity_log_in);
+        AccessToken accessToken = AccessToken.getCurrentAccessToken();
+        if (accessToken !=null){
+            Intent mainMenuIntent = new Intent(this, MenuAcitivity.class);
+            startActivity(mainMenuIntent);
+
+        }else
         initializeControls();
         loginWithFB();
 
